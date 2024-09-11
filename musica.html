@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reproductor de Música</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #12121200;
+            color: #7bfbff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .music-container {
+            width: 300px; /* Ajusta el tamaño del contenedor */
+            height: 80px; /* Ajusta la altura del contenedor */
+        }
+        .music-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-container">
+        <iframe class="music-iframe" src="https://open.spotify.com/embed/track/44XjoNvtwevktFKjvVe1vH?utm_source=generator&autoplay=1" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+</body>
+</html>
