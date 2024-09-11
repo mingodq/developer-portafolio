@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portafolio Mingod</title>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/discord-active-developer-badge.png" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #83defab7;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    cursor: url('images/cursor.png'), auto; /* Aplica el cursor personalizado */
+}
+
+/* Asegura que los enlaces y botones también usen el cursor personalizado */
+a, button {
+    cursor: url('images/cursor.png'), auto; /* Aplica el cursor personalizado */
+}
+
+/* Asegura que cualquier otro elemento que se pueda clicar use el cursor personalizado */
+a:hover, button:hover {
+    cursor: url('images/cursor.png'), auto; /* Aplica el cursor personalizado */
+}
+        .active-link {
+            color: #1E3A8A;
+            text-decoration: underline;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .nav-bar {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .location-info {
+            color: #b0b0b0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 14px; /* Tamaño de fuente más pequeño */
+        }
+        .location-info img {
+            width: 24px;
+            height: 24px;
+        }
+        .music-container {
+            width: 300px; /* Ajusta el tamaño del contenedor */
+            height: 80px; /* Ajusta la altura del contenedor */
+            margin-top: 20px; /* Espacio encima del reproductor */
+            display: none; /* Ocultar por defecto */
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .show-music .music-container {
+            display: block; /* Mostrar solo en la sección activa */
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <nav class="w-full flex flex-col md:flex-row justify-between items-center py-4 px-8 nav-bar">
+        <div class="text-white text-lg font-bold underline mb-4 md:mb-0">
+            @mingodq
+        </div>
+        <div class="flex space-x-4">
+            <button class="cursor-pointer text-white" id="inicio-link" aria-label="Ir a inicio">Inicio</button>
+            <button class="cursor-pointer text-white" id="minecraft-link" aria-label="Ver información de Minecraft">Minecraft</button>
+            <button class="cursor-pointer text-white" id="discord-link" aria-label="Ver información de Discord">Discord</button>
+            <button class="cursor-pointer text-white" id="proyectos-link" aria-label="Ver proyectos">Proyectos</button>
+        </div>
+    </nav>
+    <main class="content-container">
+        <img alt="Profile picture" class="profile-img mb-4" src="https://i.pinimg.com/564x/e7/5c/e4/e75ce4f222634690d1afc38a761fb413.jpg"/>
+        <div id="inicio-content">
+            <h1 class="text-4xl font-bold mb-4">Hola, soy Mingod</h1>
+            <p class="text-lg mb-6 leading-relaxed bg-black bg-opacity-50 p-4 rounded">
+                Me dedico al desarrollo de servidores <span class="text-green-400">minecraft</span>, desarrollo de servidores <span class="text-blue-300">discord</span>, desarrollo de bots de <span class="text-blue-300">discord</span> & plugins de <span class="text-green-400">minecraft</span>. Cuento con experiencia en lenguajes como <span class="text-blue-600">Python</span> y <span class="text-red-300">JavaScript</span>. Tengo <span class="text-orange-400">1 año de experiencia</span> en todos los desarrollos ya mencionados anteriormente.
+            </p>
+            <div class="location-info">
+                <img src="https://img.icons8.com/material-rounded/24/address.png" alt="Location icon"/>
+                <span>México (GMT-7)</span>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
+                <button class="bg-gray-800 text-white py-3 px-6 rounded-full flex items-center space-x-2 border border-gray-600 btn transition-transform duration-200" id="discord-btn" aria-label="Copiar Discord">
+                    <img src="https://img.icons8.com/color/48/discord-logo.png" alt="Discord logo" class="w-6 h-6"/>
+                    <span>DISCORD</span>
+                </button>
+                <button class="bg-gray-800 text-white py-3 px-6 rounded-full flex items-center space-x-2 border border-gray-600 btn transition-transform duration-200" id="gmail-btn" aria-label="Copiar Gmail">
+                    <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail logo" class="w-6 h-6"/>
+                    <span>GMAIL</span>
+                </button>
+                <a href="https://www.instagram.com/gael.qd/" target="_blank" class="bg-gray-800 text-white py-3 px-6 rounded-full flex items-center space-x-2 border border-gray-600 btn transition-transform duration-200" aria-label="Ir a Instagram">
+                    <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram logo" class="w-6 h-6"/>
+                    <span>INSTAGRAM</span>
+                </a>
+            </div>
+        </div>
+        <div class="hidden" id="minecraft-content">
+            <div class="text-lg mb-4 text-white bg-black bg-opacity-50 p-4 rounded space-y-4">
+                <div class="flex items-center space-x-2">
+                    <img src="https://img.icons8.com/material-outlined/24/settings--v1.png" alt="Configuración general icon" class="w-6 h-6"/>
+                    <span>Configuración general sobre el servidor.</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="https://img.icons8.com/material-outlined/24/security-checked.png" alt="Seguridad y optimización icon" class="w-6 h-6"/>
+                    <span>Seguridad y optimización.</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="https://img.icons8.com/material-outlined/24/key-security.png" alt="Configuración de IPs dedicadas icon" class="w-6 h-6"/>
+                    <span>Configuración de IPs dedicadas & puertos.</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="Desarrollo de plugins personalizados icon" class="w-6 h-6"/>
+                    <span>Desarrollo de plugins personalizados.</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <img src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="Configuración de tienda Tebex icon" class="w-6 h-6"/>
+                    <span>Configuración de tienda Tebex.</span>
+                </div>
+            </div>
+        </div>        
+        <div class="hidden" id="discord-content">
+            <p class="text-lg mb-4 text-white bg-black bg-opacity-50 p-4 rounded">
+                <span class="flex items-center gap-2">
+                    <img src="https://img.icons8.com/material-outlined/24/settings--v1.png" alt="Settings icon" class="w-6 h-6"/>
+                    Configuración de roles, permisos, canales, etc.
+                </span><br/>
+                <span class="flex items-center gap-2">
+                    <img src="https://img.icons8.com/ios-filled/50/bot.png" alt="Bot icon" class="w-6 h-6"/>
+                    Configuración de bots externos.
+                </span><br/>
+                <span class="flex items-center gap-2">
+                    <img src="https://img.icons8.com/color/48/discord-bot.png" alt="Discord Bot icon" class="w-6 h-6"/>
+                    Desarrollo de bots personalizado.
+                </span>
+            </p>
+        </div>        
+        <div class="hidden" id="proyectos-content">
+            <div class="text-lg mb-4 bg-black bg-opacity-50 p-4 rounded">
+                <strong>SERVIDORES DONDE TRABAJE</strong>
+                <div class="flex flex-wrap gap-4">
+                    <!-- Mineglow -->
+                    <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+                        <div class="info-box bg-gray-800 p-4 rounded-lg flex items-center gap-4">
+                            <img src="https://cdn.discordapp.com/icons/1250654932193906698/deb8d4ac5afc9728111e8728b3b5eb0b.png?size=4096" alt="Logo del servidor" class="w-24 h-24"/>
+                            <div class="flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white">MineGlow Network (Cerrado)</h3>
+                                <div class="social-links flex mt-2 gap-4">
+                                    <a href="https://mineglow.tebex.io" target="_blank" class="flex items-center gap-2 text-orange-500 hover:scale-105 transition-transform">
+                                        <img src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="Tienda" class="w-6 h-6"/>
+                                        Tienda
+                                    </a>
+                                    <a href="https://discord.gg/6Y6gSHPePs" target="_blank" class="flex items-center gap-2 text-blue-500 hover:scale-105 transition-transform">
+                                        <img src="https://img.icons8.com/material-outlined/24/discord.png" alt="Discord" class="w-6 h-6"/>
+                                        Discord
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Soon -->
+                </div>
+            </div>
+        </div>                                                   
+    </main>
+            <!-- Incluir el iframe de música -->
+            <iframe class="music-iframe" src="musica.html" allow="autoplay"></iframe>
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg hidden flex items-center space-x-4">
+        <span class="text-lg font-medium">Se ha copiado correctamente a tu portapapeles</span>
+        <img src="https://img.icons8.com/office/40/checked--v1.png" alt="Icono de éxito" class="w-8 h-8 ml-2">
+    </div>    
+    <script>
+        const sections = ['inicio', 'minecraft', 'discord', 'proyectos'];
+        
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                const content = document.getElementById(`${section}-content`);
+                const link = document.getElementById(`${section}-link`);
+                if (section === sectionId) {
+                    content.classList.remove('hidden');
+                    if (link) link.classList.add('active-link');
+                } else {
+                    content.classList.add('hidden');
+                    if (link) link.classList.remove('active-link');
+                }
+            });
+        }
+
+        sections.forEach(section => {
+            const link = document.getElementById(`${section}-link`);
+            if (link) {
+                link.addEventListener('click', () => showSection(section));
+            }
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 3000);
+            });
+        }
+
+        document.getElementById('discord-btn').addEventListener('click', () => copyToClipboard('mingodq'));
+        document.getElementById('gmail-btn').addEventListener('click', () => copyToClipboard('proyectosmingodq@gmail.com'));
+    </script>   
+</body>
+</html>
