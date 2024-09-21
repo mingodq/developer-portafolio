@@ -1,0 +1,211 @@
+<html>
+ <head>
+  <title>Portafolio Developer</title>
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1284922014431449158/1286939989996736613/65184d64749f5795911b78d51d9221df-removebg-preview.png?ex=66efbbc3&is=66ee6a43&hm=9f97c1bfa58a5d1b871a4591f2543bb9303ea97e3776c50793339d38a39deba7&" type="image/x-icon"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    background-image: url('https://arielxl.github.io/portafolio-web-developer/portafolio-en/img/prism1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+   .console {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    white-space: pre-wrap;
+   }
+   .typing {
+    color: #006400;
+    animation: blink 0.7s steps(1) infinite;
+   }
+   @keyframes blink {
+    50% {
+     opacity: 0;
+    }
+   }
+  </style>
+ </head>
+ <body class="font-roboto">
+  <nav class="p-4 flex justify-between items-center">
+   <div class="text-white font-bold">
+    @mingodq
+   </div>
+   <div class="space-x-2 bg-black rounded-full p-2 flex flex-wrap justify-center">
+    <a class="text-white font-bold" href="#" onclick="showHome(event)">
+     Inicio
+    </a>
+    <a class="text-white font-bold" href="#" onclick="showMinecraft(event)">
+     Minecraft
+    </a>
+    <a class="text-white font-bold" href="#" onclick="showDiscord(event)">
+     Discord
+    </a>
+    <a class="text-white font-bold" href="#" onclick="showProjects(event)">
+     Proyectos
+    </a>
+   </div>
+  </nav>
+  <div id="home" class="flex flex-col items-center mt-10">
+   <img alt="Animated gif of Mr. Robot" class="rounded-full w-24 h-24" height="100" src="https://cdn.discordapp.com/attachments/1284922014431449158/1286921785920716800/Mister_Robot.gif?ex=66efaacf&is=66ee594f&hm=125e209dea5603801876721fc05b65b50cec8b46b3298819f01d9739502f226a&" width="100"/>
+   <h1 class="text-4xl font-bold text-white mt-4 text-center">
+    Mingod • Developer & Staff
+   </h1>
+   <div class="console" id="console">
+    <span id="text"></span>
+    <span class="typing">•</span>
+   </div>
+  </div>
+  <div id="minecraft" class="hidden flex flex-col items-center mt-10">
+   <h1 class="text-4xl font-bold text-white mt-4 text-center">
+    Especialidades en Minecraft
+   </h1>
+   <div class="console text-white">
+    <p>⚡ Configuración básica y general del servidor.</p>
+    <p>🚧 Seguridad & Protección contra raids/grifeos.</p>
+    <p>🔌 Configuraciones de IPs dedicadas & puertos.</p>
+    <p>🔧 Desarrollo de plugins personalizados. (Nivel básico)</p>
+    <p>🛒 Configuración completa de tiendas Tebex.</p>
+   </div>
+  </div>
+  <div id="discord" class="hidden flex flex-col items-center mt-10">
+   <h1 class="text-4xl font-bold text-white mt-4 text-center">
+    Especialidades en Discord
+   </h1>
+   <div class="console text-white">
+    <p>💻 Configuración avanzada y general del servidor.</p>
+    <p>📡 Desarrollo de bots personalizados & semis-avanzados.</p>
+    <p>🔗 Configuración de bots externos.</p>
+   </div>
+  </div>
+  <div id="projects" class="hidden flex flex-col items-center mt-10">
+   <h1 class="text-4xl font-bold text-white mt-4 text-center">
+    Proyectos
+   </h1>
+   <div class="flex flex-wrap justify-center space-x-4">
+    <div class="bg-transparent p-4 rounded-lg text-center max-w-xs">
+     <h2 class="text-2xl font-bold mt-4 text-white">
+      MineKoth Network
+     </h2>
+     <img alt="MineKoth Network logo" class="w-24 h-24 mx-auto mt-4" src="https://cdn.discordapp.com/attachments/1274927666532712458/1286328953900109975/6890aa8d9cba99715fa89fbbfc26c49a.png?ex=66ef7cf1&is=66ee2b71&hm=ede69d72c8d73db135f13fbb9c28dba3a3df4cdf6d9eb3a8c061df8f5748e439&"/>
+     <p class="text-xl mt-4 text-white">
+      play.minekoth.xyz
+     </p>
+     <div class="flex justify-center mt-4 space-x-4">
+      <a class="text-2xl text-white" href="https://discord.gg/ch3HFfSSFu" target="_blank">
+       <i class="fab fa-discord">
+       </i>
+      </a>
+      <a class="text-2xl text-white" href="https://minekothnetwork.tebex.io/" target="_blank">
+       <i class="fas fa-shopping-cart">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div class="bg-transparent p-4 rounded-lg text-center max-w-xs">
+     <h2 class="text-2xl font-bold mt-4 text-white">
+      MineGlow Network
+     </h2>
+     <img alt="MineGlow Network logo" class="w-24 h-24 mx-auto mt-4" src="https://cdn.discordapp.com/icons/1250654932193906698/deb8d4ac5afc9728111e8728b3b5eb0b.png?size=128"/>
+     <p class="text-xl mt-4 text-white">
+      mineglow.holy.gg
+     </p>
+     <div class="flex justify-center mt-4 space-x-4">
+      <a class="text-2xl text-white" href="https://discord.gg/6Y6gSHPePs" target="_blank">
+       <i class="fab fa-discord">
+       </i>
+      </a>
+      <a class="text-2xl text-white" href="https://mineglow.tebex.io/" target="_blank">
+       <i class="fas fa-shopping-cart">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="flex justify-center mt-10 space-x-2 flex-wrap">
+   <a class="bg-gray-900 text-white py-2 px-4 rounded-full flex items-center space-x-2" href="https://discord.gg/xAJf97zw4M" target="_blank">
+    <img alt="Discord icon" class="w-6 h-6" src="https://img.icons8.com/material-rounded/24/discord-new-logo.png"/>
+    <span>
+     DISCORD
+    </span>
+   </a>
+   <a class="bg-gray-900 text-white py-2 px-4 rounded-full flex items-center space-x-2" href="https://es.namemc.com/profile/mingodq.1" target="_blank">
+    <img alt="NameMC icon" class="w-6 h-6" src="https://play-lh.googleusercontent.com/pg9PlKqg7FXSiE0GA1H8YPt5GX_2VLf9Wv4rkWq5igUfenG7ZztgmQjHN8FEttvSY6S-=w240-h480-rw"/>
+    <span>
+     NAMEMC
+    </span>
+   </a>
+   <a class="bg-gray-900 text-white py-2 px-4 rounded-full flex items-center space-x-2" href="https://www.instagram.com/gael.qd/" target="_blank">
+    <img alt="Instagram icon" class="w-6 h-6" src="https://img.icons8.com/fluency/48/instagram-new.png"/>
+    <span>
+     INSTAGRAM
+    </span>
+   </a>
+  </div>
+  <div class="flex justify-center mt-10">
+   <div class="text-black flex items-center space-x-2">
+    <i class="fas fa-map-marker-alt">
+    </i>
+    <span>
+     México (GMT-7)
+    </span>
+   </div>
+  </div>
+  <script>
+   const text = "$ Bienvenido!\n\nSoy configurador de servidores de minecraft & discord. También desarrollo bots de discord & plugins de minecraft a nivel básico. Tengo experiencia en lenguajes como Python, JavaScript y Java.";
+   let index = 0;
+   function type() {
+    if (index < text.length) {
+     document.getElementById("text").innerHTML += text.charAt(index);
+     index++;
+     setTimeout(type, 100);
+    } else {
+     document.querySelector(".typing").style.display = 'none';
+    }
+   }
+   window.onload = type;
+
+   function showHome(event) {
+    event.stopPropagation();
+    document.getElementById('home').classList.remove('hidden');
+    document.getElementById('minecraft').classList.add('hidden');
+    document.getElementById('discord').classList.add('hidden');
+    document.getElementById('projects').classList.add('hidden');
+   }
+
+   function showMinecraft(event) {
+    event.stopPropagation();
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('minecraft').classList.remove('hidden');
+    document.getElementById('discord').classList.add('hidden');
+    document.getElementById('projects').classList.add('hidden');
+   }
+
+   function showDiscord(event) {
+    event.stopPropagation();
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('minecraft').classList.add('hidden');
+    document.getElementById('discord').classList.remove('hidden');
+    document.getElementById('projects').classList.add('hidden');
+   }
+
+   function showProjects(event) {
+    event.stopPropagation();
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('minecraft').classList.add('hidden');
+    document.getElementById('discord').classList.add('hidden');
+    document.getElementById('projects').classList.remove('hidden');
+   }
+  </script>
+ </body>
+</html>
